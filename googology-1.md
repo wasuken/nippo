@@ -193,3 +193,15 @@ x(2x+3)みたいな解釈でいいのか?
 当然ながら巨大数には対応してないのでマジモンのゴミである。
 
 (abundant-number 10000000)でも普通に固まるよ。debugしてないけどSOFかも?
+
+んで、[超過剰数(wikipedia)](https://ja.wikipedia.org/wiki/%E8%B6%85%E9%81%8E%E5%89%B0%E6%95%B0)
+
+というものがあるらしい。ところでσって何。
+
+[約数関数(wikipeda)](https://ja.wikipedia.org/wiki/%E7%B4%84%E6%95%B0%E9%96%A2%E6%95%B0)
+
+とな。これも簡単そうだから実装しちゃお＾〜。
+
+```lisp
+
+```
