@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>practical-git-2.html</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+</head>
+
+<body>
+
+<h1 id="実用git">実用Git</h1>
+<p><a href="https://www.amazon.co.jp/%E5%AE%9F%E7%94%A8Git-Jon-Loeliger/dp/4873114403">実用Git | Jon Loeliger, 吉藤 英明 (監訳), 本間 雅洋, 渡邉 健太郎, 浜本 階生 |本 | 通販 | Amazon</a></p>
+<p>やっていき。</p>
+<h2 id="四章">四章</h2>
+<h3 id="gitの概念">Gitの概念</h3>
+<h4 id="リポジトリ">リポジトリ</h4>
+<p>リビジョンと履歴を維持管理するのに必要な全情報を含む、データベース。</p>
+<p><a href="https://qiita.com/YumaInaura/items/dc9e582d7096f54e649b">[Git] リビジョンとは？ コミットとは何が違う？ - Qiita</a></p>
+<hr />
+<p>Q. Qiitaのアカウント削除しといてQiita参照するんですか？</p>
+<p><del>うるせえ！！！！！！！！！！！！</del></p>
+<p>A. 別にQiitaを否定したつもりはないです。ただ、データを預けたくないと思ったので消しただけです。</p>
+<hr />
+<p>リポジトリは、オブジェクト格納領域とインデックスというデータ構造を保持する。</p>
+<p>オブジェクトは四種類ある。</p>
+<hr />
+<h5 id="ブロブ">ブロブ</h5>
+<p>ファイルの各バージョンはこれで表現される。</p>
+<h5 id="ツリー">ツリー</h5>
+<p>一階層分のディレクトリ情報をもつ。</p>
+<p>また、再起的にツリーを参照することができる。</p>
+<h5 id="コミット">コミット</h5>
+<p>リポジトリに加えられた各変更のメタデータを保持する。</p>
+<p>作者、コミッター、コミット日付、ログメッセージを含む。</p>
+<p>各コミットはツリーオブジェクトを指す。最初のコミット(ルートコミット)は親を持たない。</p>
+<h5 id="タグ">タグ</h5>
+<p>特定のオブジェクトに対して、人が読める名前をつける。</p>
+<hr />
+<p>なお、各オブジェクトは圧縮されている。</p>
+<h4 id="インデックス">インデックス</h4>
+<p>インデックスはリポジトリ全体のディレクトリ構造が記述された、一時的かつ動的なバイナリ。</p>
+<p>開発者はコマンドを使って、インデックスに変更をステージする。一つまたは複数ファイルの変更は、追加、削除、編集。</p>
+<h4 id="ハッシュ値">ハッシュ値</h4>
+<p>SHA1のハッシュ値により、オブジェクトを参照できるようになってる。</p>
+<h4 id="内容の追跡">内容の追跡</h4>
+<p>Gitのオブジェクトはファイルパス等に関係なく、ハッシュ値で判断される。</p>
+<h4 id="ファイルとツリー">ファイルとツリー</h4>
+<pre><code>
+git ls-files -s
+</code></pre>
+<p>でファイル名とハッシュ値を確認できる。</p>
+<h4 id="タグ-1">タグ</h4>
+<p>軽量タグと注釈付きタグがある。</p>
+<ul>
+<li>軽量タグ</li>
+</ul>
+<p>コミットオブジェクトを指すやつ。</p>
+<ul>
+<li>注釈付きタグ</li>
+</ul>
+<p><a href="https://backlog.com/ja/git-tutorial/stepup/20/">2. 注釈付きタグを追加する｜サルでもわかるGit入門【プロジェクト管理ツールBacklog】</a></p>
+<p>より内容のあるもの？</p>
+<p>GnuPGで署名もできる。</p>
+<p><a href="https://lecture.ecc.u-tokyo.ac.jp/johzu/joho/Y2017/GNUPrivacyGuard/GNUPrivacyGuard/gpg_2.html">暗号化/復号と電子署名</a></p>
+<h1 id="所感">所感</h1>
+<p>内容の一部が何度も読んでもわからんかった。う〜ん。</p>
+<p>こっちも文章がわからんので、調べようがないのよな。</p>
+<p>モヤモヤする…。</p>
+
+</body>
+</html>
