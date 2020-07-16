@@ -106,6 +106,64 @@ c.
 
 ### tag
 
+ここの検証？で少し時間かかった。
 
 
-# リンク
+というのも、git tag testで作成したtagのオブジェクトをみようとしても
+
+思った通りのフォーマットにはならなかったからだ。
+
+```
+
+$ git cat-file -p test
+tree 2139ef4ba96cabe84cef034b9e28adf7a2a63210
+parent bd94f6c1071c81e5f363d4f7629a9b8cb5320bef
+author wasuken <wevorence@gmail.com> 1594825062 +0900
+committer wasuken <wevorence@gmail.com> 1594825062 +0900
+
+commit.
+
+```
+
+なんでじゃぁ＾〜。
+
+と思いながらいろいろやってたらできた。
+
+どうやらメッセージをいれないといかんらしい。なぜ？
+
+```
+
+$ git tag test2 -m "This is test2"
+$ git cat-file -p test2
+object 0fc0fda19e7fc7df09195d70e56e166eddee896b
+type commit
+tag test2
+tagger wasuken <wevorence@gmail.com> 1594910197 +0900
+
+This is test2
+
+```
+
+### タグの種類
+
+これは後の章に書いてあるやつだけど、タグにはいくつか種類がある。
+
+[Git - タグ](https://git-scm.com/book/ja/v2/Git-%E3%81%AE%E5%9F%BA%E6%9C%AC-%E3%82%BF%E3%82%B0)
+
+#### 軽量タグ
+
+commitオブジェクトの参照をそのまま保存したやつ。
+
+cat-fileしても参照してるcommitオブジェクトの内容がでてくる。
+
+#### 注釈付きのタグ
+
+丁寧にtagオブジェクトまで拵えて、誰が作ったタグなのかと、そのメッセージまで書いてあるやつ。
+
+cat-fileするとtagオブジェクトの内容がでてくる。
+
+# その他リンク
+
+[Git - Gitオブジェクト](https://git-scm.com/book/ja/v2/Git%E3%81%AE%E5%86%85%E5%81%B4-Git%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88)
+
+[Git - タグ](https://git-scm.com/book/ja/v2/Git-%E3%81%AE%E5%9F%BA%E6%9C%AC-%E3%82%BF%E3%82%B0)
