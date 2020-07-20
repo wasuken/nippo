@@ -48,7 +48,7 @@ wyag記事中でも低レベルな、いわゆる配管と呼ばれているコ�
 
 逆にユーザフレンドリなコマンドは磁器と呼ばれている。
 
-GitのObjectには種類があり、blob, commit, tag, treeとある。
+aGitのObjectには種類があり、blob, commit, tag, treeとある。
 
 最初に書いとくけど、git cat-file -p <hash>で簡単に内容を確認できるし、
 
