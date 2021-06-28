@@ -14,4 +14,4 @@ echo "## 今日やったこと" >> "${path}${nowtime}.md"
 
 let id_base=$#+1
 echo "" >> "${path}${nowtime}.md"
-echo "## 明日やること" >> "${path}${nowtime}.md"
+echo "## 今週やること" >> "${path}${nowtime}.md"
